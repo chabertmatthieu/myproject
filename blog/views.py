@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, Http404
+from datetime import datetime
 
 # Create your views here.
 
@@ -29,3 +30,6 @@ def list_articles(request, month, year):
 def view_redirection(request):
 	return HttpResponse(
 		"Vous avez été redirigé")
+
+def date_actuelle(request):
+	return render(request, 'blog/date.html', {'date' :  datetime.now()})
