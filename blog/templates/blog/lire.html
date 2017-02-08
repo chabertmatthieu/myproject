@@ -1,0 +1,4 @@
+<h1>{{ article.titre }}<span class="small">{{ article.categorie.nom }}</span></h1>
+<p class="infos">Rédigé par {{ article.auteur }}, le {{ article.date }}</p>
+
+<div class="contenu">{{ article.contenu|linebreaks }}</div>
