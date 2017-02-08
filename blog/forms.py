@@ -20,4 +20,10 @@ class ArticleForm(forms.ModelForm):
 		model = Article
 		fields = '__all__'
 
-		
+
+class NouveauContactForm(forms.Form):
+	nom = forms.CharField(max_length= 225)
+	adresse = forms.CharField(widget= forms.Textarea)
+	photo = forms.ImageField()
+
+

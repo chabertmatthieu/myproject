@@ -20,5 +20,6 @@ from . import views
 urlpatterns = [
     url(r'^$', views.home, name = "accueil"),
     url(r'^article/(?P<id>\d+)-(?P<slug>.+)$', views.lire, name='lire'),
-    url(r'^contact/$', views.contact, name= 'contact')
+    url(r'^contact/$', views.contact, name= 'contact'),
+    url(r'^nouveau_contact/$', views.nouveau_contact, name= 'nouveau_contact'),
 ]
