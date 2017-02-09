@@ -1,0 +1,6 @@
+<h1>Raccourcisseur d'URL</h1>
+
+<p>Liste des URL raccourcis:</p>
+{% for url in urls %}
+	<p>{{url.url}}, lien raccourcis : <a href="{% url 'redirection' code=url.code %}"> {{url.code}} </a> (accès: {{url.nb_acces}})</p>
+{% endfor %}
